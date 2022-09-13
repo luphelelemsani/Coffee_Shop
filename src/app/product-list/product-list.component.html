@@ -1,0 +1,23 @@
+<main>
+  <div class="card-container">
+    <div class="grid-container" *ngFor="let product of products">
+      <a
+        class="grid-item"
+        [title]="product.name + ' details'"
+        [routerLink]="['/products', product.id]"
+      >
+        <div>
+          <img src="{{ product.imageUrl }}" alt="{{ product.description }}" />
+        </div>
+        <div class="user-container">
+          <div>
+            <span>{{ product.name }}</span>
+          </div>
+          <div class="likes-container">
+            <span>{{ product.price | currency: "ZAR" }}</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</main>

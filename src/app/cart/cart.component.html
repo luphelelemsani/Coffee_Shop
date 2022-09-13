@@ -1,0 +1,12 @@
+<h3>Cart</h3>
+
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span>
+  <span>{{ item.price | currency: "ZAR" }}</span>
+</div>
+
+<div class="add-to-order-container">
+  <div>
+    <button class="add-button">Pay for Coffee</button>
+  </div>
+</div>

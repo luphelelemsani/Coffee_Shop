@@ -1,0 +1,9 @@
+<div>
+  <div
+    class="icon-bg"
+    *ngIf="product && product.numberBought > 10"
+    (click)="displayPoint(product.numberBought / 10)"
+  >
+    <span class="material-symbols-outlined"> notifications_active </span>
+  </div>
+</div>

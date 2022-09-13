@@ -1,0 +1,41 @@
+<div class="grid-item" *ngIf="product">
+  <div class="product-header top">
+    <div>
+      <span class="material-symbols-outlined"> arrow_back </span>
+    </div>
+    <div><h3>Details</h3></div>
+    <div>
+      <span class="material-symbols-outlined"> favorite </span>
+    </div>
+  </div>
+  <div>
+    <img src="{{ product.imageUrl }}" alt="{{ product.description }}" />
+  </div>
+  <div class="user-container">
+    <div>
+      <h2 class="product-header">Caffee Latte</h2>
+    </div>
+    <div class="product-price">
+      <span>
+        {{ product.price | currency: "ZAR" }}
+      </span>
+    </div>
+  </div>
+  <div>
+    <p>{{ product.description }}</p>
+  </div>
+  <div class="add-to-order-container">
+    <div class="cart-counter">
+      <div class="counter-button decrement" (click)="decrement()">
+        <span class="material-symbols-outlined"> remove </span>
+      </div>
+      <div>{{ counter }}</div>
+      <div class="counter-button increment" (click)="increment()">
+        <span class="material-symbols-outlined"> add </span>
+      </div>
+    </div>
+    <div>
+      <button class="add-button" (click)="addToCart(product)">Buy Coffee</button>
+    </div>
+  </div>
+</div>

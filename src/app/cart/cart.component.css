@@ -1,0 +1,27 @@
+.grid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: grey;
+  padding: 32px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.add-to-order-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.add-button {
+  margin-top: 34px;
+  padding: 12px;
+  width: 300px;
+  border: transparent;
+  color: black;
+  background: #ffe2d8;
+  border-radius: 6px;
+  font-weight: bold;
+}
